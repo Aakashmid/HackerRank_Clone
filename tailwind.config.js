@@ -6,20 +6,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#1D1F27',
-        primary: '#00E676',
-        secondary: '#80D8FF',
-        accent: '#FF4081',
-        textPrimary: '#FFFFFF',
-        textSecondary: '#B0BEC5',
-        border: '#2E3440',
-        hover: '#303846',
-        error: '#FF5252',
-        warning: '#FFC107',
-        success: '#4CAF50',
+        background: '#1a202c', // Gray 900
+        textPrimary: '#ffffff', // White
+        textSecondary: '#a0aec0', // Gray 400
+        accent: '#10b981', // Emerald 500
+        buttonBg: '#059669', // Emerald 600
+        buttonHover: '#047857', // Emerald 700
+        borderColor: '#2d3748', // Gray 700
       },
-  },
-  plugins: [],
-}
+      plugins: [],
+    }
+  }
 }
 
