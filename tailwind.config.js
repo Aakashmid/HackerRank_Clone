@@ -6,12 +6,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#1a202c', // Gray 900
+        background: '#151519', 
+        bg2: '#1A191E', 
+        bg3: '#22222D',   // card bg 
         textPrimary: '#ffffff', // White
         textSecondary: '#a0aec0', // Gray 400
         accent: '#10b981', // Emerald 500
-        buttonBg: '#059669', // Emerald 600
-        buttonHover: '#047857', // Emerald 700
+        buttonBg: '#2EC866', // Emerald 600
+        buttonHover: '#28A55F', // Emerald 700
         borderColor: '#2d3748', // Gray 700
       },
       plugins: [],

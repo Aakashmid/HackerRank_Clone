@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 export default function Topbar() {
     return (
         <div className="topbar md:mt-0 mt-[-1px]">
-            <div className=" topbarWrapper  bg-background  ">
+            <div className=" topbarWrapper  bg-bg2 ">
                 <div className="mobile-topbar px-4  md:px-10 py-3 md:py-0 flex justify-between md:hidden items-center">
                     <div className="menu flex flex-col space-y-1.5 mr-6 md:hidden">
                         <div className="row w-6 h-0.5  bg-white"></div>
