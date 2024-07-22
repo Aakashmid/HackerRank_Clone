@@ -14,7 +14,7 @@ export default function Topics() {
         <div className="flex items-center flex-wrap bg-bg3 rounded-lg mt-4 overflow-hidden">
              {topicNames.map((data, index) => {
                 return (
-                    <Topic topicName={data.name} />
+                    <Topic key={index} topicName={data.name} />
                 )
             })}
         </div>

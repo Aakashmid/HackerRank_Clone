@@ -4,6 +4,7 @@ import PageHeader from '../components/PageHeader'
 import PreparationCard from '../components/dashboard/PreparationCard'
 import CertificationCard from '../components/dashboard/CertificationCard'
 import Topics from '../components/dashboard/Topics'
+import Footer from '../components/Footer'
 
 export default function DashBoard() {
   return (
@@ -39,6 +40,7 @@ export default function DashBoard() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   )
 }

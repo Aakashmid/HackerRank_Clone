@@ -45,4 +45,35 @@ const topicNames = [
 ]
 
 
-export {topicNames};
+const footerLinks=[
+    {
+        'link':'/',
+        'name':'Blog'
+    },
+    {
+        'link':'/',
+        'name':'Scoring'
+    },
+    {
+        'link':'/',
+        'name':'FAQ'
+    },
+    {
+        'link':'/',
+        'name':'About Us'
+    },
+    {
+        'link':'/',
+        'name':'Support'
+    },
+    {
+        'link':'/',
+        'name':'Terms Of Service'
+    },
+    {
+        'link':'/',
+        'name':'Privacy Policy'
+    },
+]
+
+export {topicNames,footerLinks};
