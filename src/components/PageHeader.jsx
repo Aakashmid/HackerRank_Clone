@@ -8,7 +8,7 @@ export default function PageHeader({pageName,heading,bookmarkedChanllenges}) {
                     <h1 className="text-textPrimary font-semibold text-[22px]">{heading}</h1>
                 </div>
                 <div className="hidden md:block">
-                    {bookmarkedChanllenges && <a href="/" className="hover:underline active:underline text-indigo-500 text-sm">Bookmarked Challenges</a>}
+                    {bookmarkedChanllenges && <a href="/" className="hover:underline active:underline text-thirdText text-sm">Bookmarked Challenges</a>}
                 </div>
             </div>
         </div>

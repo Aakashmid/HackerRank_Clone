@@ -15,6 +15,7 @@ module.exports = {
         buttonBg: '#2EC866', // Emerald 600
         buttonHover: '#28A55F', // Emerald 700
         borderColor: '#2d3748', // Gray 700
+        thirdText:'#5773f0'
       },
       plugins: [],
     }

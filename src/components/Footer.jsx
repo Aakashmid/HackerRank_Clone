@@ -10,7 +10,7 @@ export default function Footer() {
                 {footerLinks.map((link, id) => {
                     return (
                         <div className="flex items-center " key={id}>
-                            <Link to={link.link} className='text-blue-700 text-sm'>
+                            <Link to={link.link} className='text-thirdText text-sm'>
                                 {link.name}
                             </Link>
                             {id!==(footerLinks.length-1) && <div className="w-[1px] h-3 mx-2 bg-slate-500"></div>}

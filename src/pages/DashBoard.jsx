@@ -9,7 +9,7 @@ import Footer from '../components/Footer'
 export default function DashBoard() {
   return (
     <>
-      <Topbar />
+      <Topbar pageName={'dashboard'} />
       <div className='dashboard-container bg-background min-h-[100vh] w-full'>
         <PageHeader pageName="Prepare" heading="Learning programming skills" bookmarkedChanllenges={true} />
         <div className="dashboard-wrapper  xl:w-10/12 2xl:w-[70%] w-full  mx-auto  px-4 lg:px-5  ">
