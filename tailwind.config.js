@@ -9,6 +9,7 @@ module.exports = {
         background: '#151519', 
         bg2: '#1A191E', 
         bg3: '#22222D',   // card bg 
+        bg4:'#2b2b30', // dropdown bg of topbar
         textPrimary: '#ffffff', // White
         textSecondary: '#a0aec0', // Gray 400
         accent: '#10b981', // Emerald 500
