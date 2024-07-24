@@ -13,7 +13,7 @@ export default function DropDown() {
         <ul className="flex flex-col mt-4 space-y-2">
           {navLinks.map((link, id) => {
             return (
-              <li className=''>
+              <li key={id} className=''>
                 <div className="w-full bg-gray-700 h-[1px] mb-2"></div>
                 <Link to={'/'} className='text-gray-200  text-sm  hover:font-medium hover:text-textPrimary hover:text-[15px] '>
                   {link.name}

@@ -5,6 +5,7 @@ import PreparationCard from '../components/dashboard/PreparationCard'
 import CertificationCard from '../components/dashboard/CertificationCard'
 import Topics from '../components/dashboard/Topics'
 import Footer from '../components/Footer'
+import PrepKitCard from '../components/dashboard/PrepKitCard'
 
 export default function DashBoard() {
   return (
@@ -32,15 +33,19 @@ export default function DashBoard() {
 
           <div className="topics mt-10">
             <p className="font-medium text-textPrimary text-lg">Prepare by topics</p>
-            <Topics/>
+            <Topics />
           </div>
 
-          <div className="prepartion-kits mt-10">
+          <div className="prepartion-kits mt-10 pb-12">
             <p className="font-medium text-textPrimary text-lg">Preparation Kits</p>
+            <div className="mt-4 flex justify-between flex-wrap md:space-y-0 space-y-6">
+              <PrepKitCard title={'1 Week Preparation Kit '}  Preparation={{'challenges':21,'attempts':344950,'mock_test':6}}/>
+              <PrepKitCard title={'1 Month Preparation Kit '}  Preparation={{'challenges':54,'attempts':103478,'mock_test':4}}/>
+            </div>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   )
 }
