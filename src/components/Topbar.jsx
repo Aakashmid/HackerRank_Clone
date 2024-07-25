@@ -54,9 +54,9 @@ export default function Topbar({ pageName }) {
                     <div className="rightTopbar flex items-center">
                         <div className="topBar-SeachBar bg-gray-700 p-0.5 rounded-md shadow-white mr-4 flex ">
                             <button className="text-white px-1"><Search fontSize="small" /></button>
-                            <input type="text" className="bg-gray-700 text-white p-1 text-[13px] placeholder:text-gray-100 focus:outline-none w-16 lg:w-32 xl:w-44" placeholder="Search" />
+                            <input type="text" className="bg-gray-700 text-white p-1 text-[13px] placeholder:text-gray-100 focus:outline-none w-16 lg:w-36 xl:w-44" placeholder="Search" />
                         </div>
-                        <div className="flex items-center space-x-4 ">
+                        <div className="flex items-center space-x-6 ">
                             <span className="text-textSecondary p-1"><ChatBubbleOutline fontSize="small" /></span>
                             <span className="text-textSecondary p-1"><NotificationsNone fontSize="medium" /></span>
 

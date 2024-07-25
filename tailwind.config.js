@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         background: '#151519', 
-        bg2: '#1A191E', 
+        bg2: '#0e141e', 
         bg3: '#22222D',   // card bg 
         bg4:'#2b2b30', // dropdown bg of topbar
         textPrimary: '#ffffff', // White
