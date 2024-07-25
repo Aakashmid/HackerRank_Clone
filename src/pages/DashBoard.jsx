@@ -1,24 +1,28 @@
-import React from 'react'
-import Topbar from '../components/Topbar'
+import React, { useState } from 'react'
 import PageHeader from '../components/PageHeader'
 import PreparationCard from '../components/dashboard/PreparationCard'
 import CertificationCard from '../components/dashboard/CertificationCard'
 import Topics from '../components/dashboard/Topics'
-import Footer from '../components/Footer'
 import PrepKitCard from '../components/dashboard/PrepKitCard'
 
 export default function DashBoard() {
+
+  const [progess, setprogess] = useState({
+    cpp: 30,
+    python: 60,
+  })
+
   return (
     <>
-      <Topbar pageName={'dashboard'} />
+     
       <div className='dashboard-container bg-background min-h-[100vh] w-full'>
         <PageHeader pageName="Prepare" heading="Learning programming skills" bookmarkedChanllenges={true} />
         <div className="dashboard-wrapper  xl:w-10/12 2xl:w-[70%] w-full  mx-auto  px-4 lg:px-5  ">
           <div className="prepCards-container mt-8">
             <p className="font-medium text-textPrimary text-lg">Your Preparation</p>
             <div className="dashboarPrepCards flex justify-between flex-wrap space-y-6 md:space-y-0 mt-4  ">
-              <PreparationCard prepName={'Python'} />
-              <PreparationCard prepName={'C++'} />
+              <PreparationCard prepName={'Python'} progess={progess.python} />
+              <PreparationCard prepName={'C++'} progess={progess.cpp} />
             </div>
           </div>
 
@@ -45,7 +49,7 @@ export default function DashBoard() {
           </div>
         </div>
       </div>
-      <Footer />
+     
     </>
   )
 }
