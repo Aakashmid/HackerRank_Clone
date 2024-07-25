@@ -1,8 +1,10 @@
- function Certify(){
+import PageHeader from "../components/PageHeader";
+ 
+function Certify(){
     return(
-        <>
-            <h2>certify </h2>
-        </>
+        <div className='dashboard-container bg-background min-h-[100vh] w-full'>
+            <PageHeader pageName="Certification Tests" heading="Get Certified" bookmarkedChanllenges={false} />
+        </div>
     );
  }
 
