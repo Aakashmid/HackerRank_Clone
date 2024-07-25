@@ -26,7 +26,7 @@ export default function PrepKitCard({ title, Preparation }) {
                     <button className="px-3 py-[6px] rounded-lg bg-[#141727d5] text-blue-100 text-[13px] font-medium">Problem Solving(Intermediate)</button>
                     <button className="text-[13px] text-gray-300 hover:text-white font-medium relative" onMouseEnter={handleMouseHover} onMouseLeave={handleMouseLeave}>+1
                         {isHovered && (
-                        <div className="absolute bg-black p-2 w-44 -translate-y-10 duration-1000 top-0 -right-[88px]  rounded-md  ">
+                        <div className="absolute bg-black p-2 w-44 transform  -translate-y-10  duration-1000 top-0 -right-[40px] lg:-right-[88px]  rounded-md  ">
                             <Link className="underline text-white text-[12px] ">Problem Solving(Advanced)</Link>
                         </div>
                       

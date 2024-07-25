@@ -75,5 +75,39 @@ const footerLinks=[
         'name':'Privacy Policy'
     },
 ]
+const sideBarLinks=[
+    {
+        'link':'/',
+        'name':'Prepare'
+    },
+    {
+        'link':'/',
+        'name':'Certify'
+    },
+    {
+        'link':'/',
+        'name':'Compete'
+    },
+    {
+        'link':'/',
+        'name':'Apply'
+    },
+    {
+        'link':'/',
+        'name':'Profile'
+    },
+    {
+        'link':'/',
+        'name':'Leaderboard'
+    },
+    {
+        'link':'/',
+        'name':'Bookmarks'
+    },
+    {
+        'link':'/',
+        'name':'Settings'
+    }
+]
 
-export {topicNames,footerLinks};
+export {topicNames,footerLinks,sideBarLinks};

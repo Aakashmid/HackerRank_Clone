@@ -1,24 +1,29 @@
-import { ChatBubbleOutline, ExpandMore, NotificationsNone, Search, AppsOutlined } from "@mui/icons-material"
+import { ChatBubbleOutline, ExpandMore, NotificationsNone, Search, AppsOutlined, SdOutlined } from "@mui/icons-material"
 import { Link } from "react-router-dom"
 import DropDown from "./topbar/DropDown"
 import { useState } from "react"
-
+import { sideBarLinks } from "../DummyData/DummyData"
 
 export default function Topbar({ pageName }) {
     const [menuHidden, setMenuHidden] = useState(true)
+    const [sidebarHidden, setSidebarHidden] = useState(true)
 
     const handleMenuState = () => {
         setMenuHidden(!menuHidden)
     }
 
+    const hanldeSidebarState = () => {
+        setSidebarHidden(!sidebarHidden)
+    }
+
     return (
         <div className="topbar md:mt-0 mt-[-1px]">
-            <div className=" topbarWrapper  bg-bg2 ">
+            <div className=" topbarWrapper  bg-bg2  ">
                 <div className="mobile-topbar px-4  md:px-10 py-3 md:py-0 flex justify-between md:hidden items-center">
-                    <div className="menu flex flex-col space-y-1.5 mr-6 md:hidden">
-                        <div className="row w-6 h-0.5  bg-white"></div>
-                        <div className="row w-6 h-0.5  bg-white"></div>
-                        <div className="row w-6 h-0.5  bg-white"></div>
+                    <div className="menu flex flex-col h-5 justify-between mr-6 md:hidden" onClick={hanldeSidebarState}>
+                        <div className={`row w-6 h-0.5  duration-300 bg-white  ${!sidebarHidden && 'rotate-45 translate-y-[9px] '}`}></div>
+                        <div className={`row w-6 h-0.5  bg-white ${!sidebarHidden && 'hidden'}`}></div>
+                        <div className={`row w-6 h-0.5  duration-300 bg-white  ${!sidebarHidden && '-rotate-45 -translate-y-[9px] '}`}></div>
                     </div>
                     <span className="logo"><img src="assets/logo.png" className="w-[138px] " alt="" /></span>
                     <div className="topbar-icons flex items-center p-1 space-x-3 text-white">
@@ -26,6 +31,25 @@ export default function Topbar({ pageName }) {
                         <span className=""><NotificationsNone fontSize="medium" /></span>
                     </div>
                 </div>
+
+                {/* sidebar for mobile screen */}
+                {!sidebarHidden &&
+                    (<div className="mobile-sidebar w-[100vw] h-[100vh] bg-gray-50 absolute scrollbar ">
+                        <ul className="flex flex-col pt-4  ">
+                            {sideBarLinks.map((obj, id) => {
+                                return (<>
+                                    <li key={id} className=" flex"><Link to='/' className="text-gray-600 hover:bg-gray-200 active:bg-blue-200 font-light px-5 py-2 flex-grow text-[17px]">{obj.name}</Link></li>
+                                    {id === ((sideBarLinks.length / 2) - 1) && <><hr className="my-2 bg-black" /></>}
+                                </>
+                                )
+                            })}
+                        </ul>
+                        <hr className="bg-black my-2" />
+                        <li className="flex">
+                            <Link to={'#'} className="text-thirdText px-5 py-2 hover:bg-gray-200 active:bg-blue-200 flex-grow ">Logout</Link>
+                        </li>
+                    </div>)}
+
 
                 <div className="larger-screen-topbar hidden md:flex justify-between items-center w-full md:px-6 lg:px-12 py-3 ">
                     <div className="leftTopbar flex items-center">
@@ -69,7 +93,7 @@ export default function Topbar({ pageName }) {
                                 </button>
                                 {!menuHidden && (<>
                                     <span className="fixed bg-black w-full h-full right-0 top-0 opacity-0" onClick={handleMenuState}></span>
-                                    <DropDown/>
+                                    <DropDown />
                                 </>)}
 
 
