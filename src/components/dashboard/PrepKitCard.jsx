@@ -10,7 +10,7 @@ export default function PrepKitCard({ title, Preparation }) {
     const handleMouseLeave = () => {
         setTimeout(() => {
             setIsHovered(false)
-        }, 2000);
+        }, 4000);
     }
 
 
