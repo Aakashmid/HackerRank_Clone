@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { LinearProgress } from "@mui/material";
-=======
 import LinearProgress from '@mui/material/LinearProgress/LinearProgress'
->>>>>>> 727c6a33bf1f56a9d01dd5635da049ec1a9fec0f
 
 export default function PreparationCard({ prepName, progess }) {
   return (

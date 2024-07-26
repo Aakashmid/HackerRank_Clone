@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { ChangeHistoryOutlined } from "@mui/icons-material"
 
 export default function PrepKitCard({ title, Preparation }) {
     const [isHovered, setIsHovered] = useState(false)
@@ -10,7 +9,7 @@ export default function PrepKitCard({ title, Preparation }) {
     const handleMouseLeave = () => {
         setTimeout(() => {
             setIsHovered(false)
-        }, 4000);
+        }, 3000);
     }
 
 

@@ -77,23 +77,23 @@ const footerLinks=[
 ]
 const sideBarLinks=[
     {
-        'link':'/',
+        'link':'/dashboard',
         'name':'Prepare'
     },
     {
-        'link':'/',
+        'link':'/certify',
         'name':'Certify'
     },
     {
-        'link':'/',
+        'link':'/compete',
         'name':'Compete'
     },
     {
-        'link':'/',
+        'link':'/apply',
         'name':'Apply'
     },
     {
-        'link':'/',
+        'link':'/profile',
         'name':'Profile'
     },
     {

@@ -1,7 +1,7 @@
 import { ChatBubbleOutline, ExpandMore, NotificationsNone, Search, AppsOutlined, SdOutlined } from "@mui/icons-material"
 import { Link } from "react-router-dom"
 import DropDown from "./topbar/DropDown"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { sideBarLinks } from "../DummyData/DummyData"
 
 export default function Topbar({ pageName }) {
@@ -16,10 +16,19 @@ export default function Topbar({ pageName }) {
         setSidebarHidden(!sidebarHidden)
     }
 
+    useEffect(()=>{
+        if(!sidebarHidden){
+            document.body.classList.add('overflow-hidden');
+        }
+        else{
+            document.body.classList.remove('overflow-hidden');
+        }
+    },[sidebarHidden])
+
     return (
         <div className="topbar md:mt-0 mt-[-1px]">
             <div className=" topbarWrapper  bg-bg2  ">
-                <div className="mobile-topbar px-4  md:px-10 py-3 md:py-0 flex justify-between md:hidden items-center">
+                <div className="mobile-topbar px-5  md:px-10 py-3 md:py-0 flex justify-between md:hidden items-center">
                     <div className="menu flex flex-col h-5 justify-between mr-6 md:hidden" onClick={hanldeSidebarState}>
                         <div className={`row w-6 h-0.5  duration-300 bg-white  ${!sidebarHidden && 'rotate-45 translate-y-[9px] '}`}></div>
                         <div className={`row w-6 h-0.5  bg-white ${!sidebarHidden && 'hidden'}`}></div>
@@ -34,18 +43,18 @@ export default function Topbar({ pageName }) {
 
                 {/* sidebar for mobile screen */}
                 {!sidebarHidden &&
-                    (<div className="mobile-sidebar w-[100vw] h-[100vh] bg-gray-50 absolute scrollbar ">
+                    (<div className="mobile-sidebar w-[100vw] h-[100vh] md:hidden bg-gray-50 fixed -left-full translate-x-full   z-10 ">
                         <ul className="flex flex-col pt-4  ">
                             {sideBarLinks.map((obj, id) => {
                                 return (<>
-                                    <li key={id} className=" flex"><Link to='/' className="text-gray-600 hover:bg-gray-200 active:bg-blue-200 font-light px-5 py-2 flex-grow text-[17px]">{obj.name}</Link></li>
+                                    <li key={id} className=" flex" onClick={hanldeSidebarState}><Link to={obj.link} className="text-gray-600 hover:bg-gray-200 active:bg-blue-200 font-light px-5 py-2 flex-grow text-[17px]">{obj.name}</Link></li>
                                     {id === ((sideBarLinks.length / 2) - 1) && <><hr className="my-2 bg-black" /></>}
                                 </>
                                 )
                             })}
                         </ul>
                         <hr className="bg-black my-2" />
-                        <li className="flex">
+                        <li key={sideBarLinks.length} className="flex">
                             <Link to={'#'} className="text-thirdText px-5 py-2 hover:bg-gray-200 active:bg-blue-200 flex-grow ">Logout</Link>
                         </li>
                     </div>)}
