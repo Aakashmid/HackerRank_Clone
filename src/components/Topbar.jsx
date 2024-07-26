@@ -61,8 +61,8 @@ export default function Topbar({ pageName }) {
                                 {pageName === 'dashboard' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
 
                             </li>
-                            <li className="relative">
-                                <Link to='/' className={`px-[18px]  ${pageName === 'certify' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Certify</Link>
+                            <li className="relative"  >
+                                <Link to='/Certify' className={`px-[18px]  ${pageName === 'certify' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Certify</Link>
                                 {pageName === 'certify' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
                             </li>
                             <li className="relative">
