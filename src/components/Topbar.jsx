@@ -16,14 +16,14 @@ export default function Topbar({ pageName }) {
         setSidebarHidden(!sidebarHidden)
     }
 
-    useEffect(()=>{
-        if(!sidebarHidden){
+    useEffect(() => {
+        if (!sidebarHidden) {
             document.body.classList.add('overflow-hidden');
         }
-        else{
+        else {
             document.body.classList.remove('overflow-hidden');
         }
-    },[sidebarHidden])
+    }, [sidebarHidden])
 
     return (
         <div className="topbar md:mt-0 mt-[-1px]">
@@ -53,8 +53,8 @@ export default function Topbar({ pageName }) {
                                 )
                             })}
                         </ul>
-                        <hr className="bg-black my-2" />
-                        <li key={sideBarLinks.length} className="flex">
+                        <hr key={sideBarLinks.length} className="bg-black my-2" />
+                        <li key={sideBarLinks.length + 1} className="flex">
                             <Link to={'#'} className="text-thirdText px-5 py-2 hover:bg-gray-200 active:bg-blue-200 flex-grow ">Logout</Link>
                         </li>
                     </div>)}
@@ -66,12 +66,12 @@ export default function Topbar({ pageName }) {
                         <ul className="nav-links flex  text-textSecondary  items-center text-[13px]">
                             <li className="px-4 "><div className="h-4 w-0.5 bg-borderColor"></div></li>
                             <li className="relative">
-                                <Link to='/' className={`px-[18px]  ${pageName === 'dashboard' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Prepare</Link>
+                                <Link to='/dashboard' className={`px-[18px]  ${pageName === 'dashboard' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Prepare</Link>
                                 {pageName === 'dashboard' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
 
                             </li>
                             <li className="relative"  >
-                                <Link to='/Certify' className={`px-[18px]  ${pageName === 'certify' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Certify</Link>
+                                <Link to='/certify' className={`px-[18px]  ${pageName === 'certify' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Certify</Link>
                                 {pageName === 'certify' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
                             </li>
                             <li className="relative">
