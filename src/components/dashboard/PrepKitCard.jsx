@@ -15,7 +15,7 @@ export default function PrepKitCard({ title, Preparation }) {
 
     return (
         <>
-            <div className="bg-bg3 md:py-5  md:px-6 p-4 w-full md:w-[49%]  rounded-xl h-[140px] flex flex-col justify-between">
+            <div className="bg-bg3 md:py-5  md:px-6 p-4   rounded-xl h-[140px] flex flex-col justify-between">
                 <div className="">
                     <h2 className="text-gray-200 font-medium ">{title}</h2>
                     <p className="text-textBlueGray text-[13px] mt-2">Challenges: <span className="text-gray-200">{Preparation.challenges}</span>, Attempts: <span className="text-gray-200"> {Preparation.attempts} </span>, Mock Tests :<span className="text-gray-200"> {Preparation.mock_test} </span></p>

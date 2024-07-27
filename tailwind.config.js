@@ -9,11 +9,11 @@ module.exports = {
       colors: {
         background: '#151519', 
         bg2: '#0e141e', 
-        bg3: '#22222D',   // card bg 
+        bg3: '#1f202a',   // card bg 
         bg4:'#2b2b30', // dropdown bg of topbar
         textPrimary: '#ffffff', // White
         textSecondary: '#a0aec0', // Gray 400
-        thirdText:'#5773f0',
+        thirdText:'#6687ff',
         textBlueGray:'#83839e',
         accent: '#10b981', // Emerald 500
         buttonBg: '#2EC866', // Emerald 600

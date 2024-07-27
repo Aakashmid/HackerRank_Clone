@@ -74,30 +74,20 @@ export default function Topbar({ pageName, handlePageName }) {
                         <ul className="nav-links flex  text-textSecondary  items-center text-[13px]">
                             <li className="px-4 "><div className="h-4 w-0.5 bg-borderColor"></div></li>
                             <li className="relative">
-<<<<<<< HEAD
-                                <Link to='/dashboard' className={`px-[18px]  ${pageName === 'dashboard' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Prepare</Link>
-                                {pageName === 'dashboard' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
-
-                            </li>
-                            <li className="relative"  >
-                                <Link to='/certify' className={`px-[18px]  ${pageName === 'certify' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Certify</Link>
-                                {pageName === 'certify' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
-=======
-                                <Link to='/' onClick={()=>OnUpdatePageName('dashboard')}  className={`px-[18px]  ${pageName === 'dashboard' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200 '}`}>Prepare</Link>
+                                <Link to='/dashboard' onClick={() => OnUpdatePageName('dashboard')} className={`px-[18px]  ${pageName === 'dashboard' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200 '}`}>Prepare</Link>
                                 {pageName === 'dashboard' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
 
                             </li>
                             <li className="relative">
-                                <Link to='/Certify' onClick={()=>OnUpdatePageName('Certify')} className={`px-[18px]  ${pageName === 'certify' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Certify</Link>
+                                <Link to='/Certify' onClick={() => OnUpdatePageName('Certify')} className={`px-[18px]  ${pageName === 'certify' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Certify</Link>
                                 {pageName === 'Certify' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
->>>>>>> 95e418005a3857d1fb95c22fd6cbe59dd2da4255
                             </li>
                             <li className="relative">
-                                <Link to='/compete' onClick={()=>OnUpdatePageName('compete')}  className={`px-[18px]   ${pageName === 'compete' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Compete</Link>
+                                <Link to='/contests' onClick={() => OnUpdatePageName('compete')} className={`px-[18px]   ${pageName === 'compete' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Compete</Link>
                                 {pageName === 'compete' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
                             </li>
                             <li className="relative">
-                                <Link to='/apply' onClick={()=>OnUpdatePageName('apply')}  className={`px-[18px]   ${pageName === 'apply' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Apply</Link>
+                                <Link to='/apply' onClick={() => OnUpdatePageName('apply')} className={`px-[18px]   ${pageName === 'apply' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Apply</Link>
                                 {pageName === 'apply' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
                             </li>
                         </ul>
