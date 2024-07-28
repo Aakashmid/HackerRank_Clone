@@ -6,7 +6,7 @@ export default function PageHeader({ pageName, heading, bookmarkedChanllenges })
             <div className="xl:w-10/12 2xl:w-[70%]  mx-auto flex justify-between items-center px-5 ">
                 <div className="HeaderRight text-left py-5">
                     <span className="text-textSecondary text-xs hidden md:block ">{pageName}</span>
-                    <h1 className="text-textPrimary font-semibold text-[1.4em] md:text-[26px]">{heading}</h1>
+                    <h1 className="text-textPrimary font1  font-semibold text-[1.4em] md:text-[26px]">{heading}</h1>
                 </div>
                 <div className="hidden md:block">
                     {pageName === 'All Contests' && (
