@@ -74,7 +74,7 @@ export default function Topbar({ pageName, handlePageName }) {
                         <ul className="nav-links flex  text-textSecondary  items-center text-[13px]">
                             <li className="px-4 "><div className="h-4 w-0.5 bg-borderColor"></div></li>
                             <li className="relative">
-                                <Link to='/dashboard' onClick={() => OnUpdatePageName('dashboard')} className={`px-[18px]  ${pageName === 'dashboard' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200 '}`}>Prepare</Link>
+                                <Link to='/' onClick={() => OnUpdatePageName('dashboard')} className={`px-[18px]  ${pageName === 'dashboard' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200 '}`}>Prepare</Link>
                                 {pageName === 'dashboard' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
 
                             </li>
