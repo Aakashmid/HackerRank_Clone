@@ -110,7 +110,7 @@ export default function Topbar({ pageName, handlePageName }) {
                                 </button>
                                 {!menuHidden && (<>
                                     <span className="fixed bg-black w-full h-full right-0 top-0 opacity-0" onClick={handleMenuState}></span>
-                                    <DropDown />
+                                    <DropDown handlePageName={handlePageName} />
                                 </>)}
 
 

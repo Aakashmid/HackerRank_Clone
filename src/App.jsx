@@ -5,6 +5,7 @@ import Topbar from "./components/Topbar"
 import Footer from "./components/Footer.jsx"
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Certify from "./pages/Certify.jsx";
+import Profile from "./pages/Profile.jsx";
 function App() {
   const [pageName ,setpageName] = useState('dashboard')
 
@@ -21,8 +22,9 @@ function App() {
           <Route path="/Certify" element={<Certify/>} />
           <Route path='/' element={<DashBoard/>} />
           <Route path='/contests' element={<Contests/>} />
+          <Route path='/profile' element={<Profile/>} />
         </Routes>
-        <Footer />
+        <Footer pageName={pageName} />
       </Router>
     </React.Fragment>
   );

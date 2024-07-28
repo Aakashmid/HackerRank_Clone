@@ -3,9 +3,9 @@ import React from 'react'
 import { footerLinks } from '../DummyData/DummyData'
 import { Link } from 'react-router-dom'
 
-export default function Footer() {
+export default function Footer({pageName}) {
     return (
-        <footer className='w-full bg-background px-4 pt-14'>
+        <footer className={`w-full ${pageName === 'Profile' ? 'bg-page_background2':'bg-page_background'}  px-4 pt-14`}>
             <div className="w-fit flex items-center mx-auto p-2  flex-wrap">
                 {footerLinks.map((link, id) => {
                     return (

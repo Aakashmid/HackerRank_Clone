@@ -15,7 +15,7 @@ export default function DashBoard() {
   return (
     <>
      
-      <div className='dashboard-container bg-background min-h-[100vh] w-full'>
+      <div className='dashboard-container bg-page_background min-h-[100vh] w-full'>
         <PageHeader pageName="Prepare" heading="Learn programming skills" bookmarkedChanllenges={true} />
         <div className="dashboard-wrapper  xl:w-10/12 2xl:w-[70%] w-full  mx-auto  px-5  ">
           <div className="prepCards-container mt-8">

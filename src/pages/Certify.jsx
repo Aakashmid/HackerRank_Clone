@@ -4,7 +4,7 @@ import { rolesCertifications,skillCertifications } from "../DummyData/CertifyPag
 
 function Certify() {
     return (
-        <div className="certify-container bg-background min-h-[100vh] w-full">
+        <div className="certify-container bg-page_background min-h-[100vh] w-full">
             <PageHeader pageName="Certification Tests" heading="Get Certified" bookmarkedChanllenges={false} />
             <div className="banner-wrapper bg-gradient-to-r from-[#193b84]  to-[#037bc1]  ">
                 <div className=" flex flex-wrap  xl:w-10/12 2xl:w-[70%] w-full  mx-auto  px-5 py-10  ">
