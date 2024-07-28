@@ -8,9 +8,9 @@ export default function PageHeader({ pageName, heading, bookmarkedChanllenges })
                     <span className="text-textSecondary text-xs hidden md:block ">{pageName}</span>
                     <h1 className="text-textPrimary font-semibold text-[1.4em] md:text-[26px]">{heading}</h1>
                 </div>
-                <div className="hidden md:block">
+                <div>
                     {pageName === 'All Contests' && (
-                        <div className="contest-manage-btns flex items-center justify-end gap-4 ">
+                        <div className="hidden md:flex contest-manage-btns  items-center justify-end gap-4 ">
                             <div className="contest-manage-btn px-5 py-2 rounded-md outline outline-1  text-white text-sm font-medium">
                                 <Link>
                                     Manage a Contest

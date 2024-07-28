@@ -19,7 +19,7 @@ function App() {
         <Routes>
           {/* using component prop in Route is (Deprecated in v6) */}
           <Route path="/Certify" element={<Certify/>} />
-          <Route path='/dashboard' element={<DashBoard/>} />
+          <Route path='/' element={<DashBoard/>} />
           <Route path='/contests' element={<Contests/>} />
         </Routes>
         <Footer />
