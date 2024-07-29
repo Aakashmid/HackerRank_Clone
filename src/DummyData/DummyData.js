@@ -77,7 +77,7 @@ const footerLinks=[
 ]
 const sideBarLinks=[
     {
-        'link':'/dashboard',
+        'link':'/',
         'name':'Prepare'
     },
     {
@@ -85,7 +85,7 @@ const sideBarLinks=[
         'name':'Certify'
     },
     {
-        'link':'/compete',
+        'link':'/contests',
         'name':'Compete'
     },
     {

@@ -3,7 +3,7 @@ export default function CertificationCard({ topicName }) {
   return (
     <>
       {topicName ? (
-        <div className=" bg-bg3 p-7 md:p-6   rounded-2xl h-40 flex flex-col justify-between ">
+        <div className=" bg-bg3 p-7 md:p-6  hover:bg-card_hover_bg rounded-2xl h-40 flex flex-col justify-between ">
           <h2 className="text-textPrimary font-medium  text-xl ">{topicName}</h2>
           <div className="">
             <button className="button bg-transparent text-textPrimary font-medium text-sm px-3  w-fit py-[6px]   custom-shadow-white  hover:border-none hover:bg-gray-500 rounded-md">

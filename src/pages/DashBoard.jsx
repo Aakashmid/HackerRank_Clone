@@ -40,9 +40,9 @@ export default function DashBoard() {
             <Topics />
           </div>
 
-          <div className="prepartion-kits mt-8 pb-12">
+          <div className="prepartion-kits mt-8 pb-6">
             <p className="font-medium text-textPrimary text-lg">Preparation Kits</p>
-            <div className="py-4 grid grid-cols-2 gap-7">
+            <div className="py-4 grid md:grid-cols-2 gap-7">
               <PrepKitCard title={'1 Week Preparation Kit '}  Preparation={{'challenges':21,'attempts':344950,'mock_test':6}}/>
               <PrepKitCard title={'1 Month Preparation Kit '}  Preparation={{'challenges':54,'attempts':103478,'mock_test':4}}/>
             </div>

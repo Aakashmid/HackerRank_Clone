@@ -2,8 +2,7 @@ import { ChatBubbleOutline, ExpandMore, NotificationsNone, Search, AppsOutlined,
 import { Link } from "react-router-dom"
 import DropDown from "./topbar/DropDown"
 import { useEffect, useState } from "react"
-import { sideBarLinks } from "../DummyData/DummyData"
-
+import SideBar from "./topbar/SideBar"
 export default function Topbar({ pageName, handlePageName }) {
     const [menuHidden, setMenuHidden] = useState(true)
     const [sidebarHidden, setSidebarHidden] = useState(true)
@@ -34,7 +33,7 @@ export default function Topbar({ pageName, handlePageName }) {
     // let BtnClass = 'absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg'
 
     return (
-        <div className="topbar md:mt-0 mt-[-1px]">
+        <div className="topbar md:mt-0 ">
             <div className=" topbarWrapper  bg-bg2  ">
                 <div className="mobile-topbar px-5  md:px-10 py-3 md:py-0 flex justify-between md:hidden items-center">
                     <div className="menu flex flex-col h-5 justify-between mr-6 md:hidden" onClick={hanldeSidebarState}>
@@ -50,23 +49,7 @@ export default function Topbar({ pageName, handlePageName }) {
                 </div>
 
                 {/* sidebar for mobile screen */}
-                {!sidebarHidden &&
-                    (<div className="mobile-sidebar w-[100vw] h-[100vh] md:hidden bg-gray-50 fixed -left-full translate-x-full   z-10 ">
-                        <ul className="flex flex-col pt-4  ">
-                            {sideBarLinks.map((obj, id) => {
-                                return (<>
-                                    <li key={id} className=" flex" onClick={hanldeSidebarState}><Link to={obj.link} className="text-gray-600 hover:bg-gray-200 active:bg-blue-200 font-light px-5 py-2 flex-grow text-[17px]">{obj.name}</Link></li>
-                                    {id === ((sideBarLinks.length / 2) - 1) && <><hr className="my-2 bg-black" /></>}
-                                </>
-                                )
-                            })}
-                        </ul>
-                        <hr key={sideBarLinks.length} className="bg-black my-2" />
-                        <li key={sideBarLinks.length + 1} className="flex">
-                            <Link to={'#'} className="text-thirdText px-5 py-2 hover:bg-gray-200 active:bg-blue-200 flex-grow ">Logout</Link>
-                        </li>
-                    </div>)}
-
+                {!sidebarHidden && <SideBar hanldeSidebarState={hanldeSidebarState} />}
 
                 <div className="larger-screen-topbar hidden md:flex justify-between items-center w-full md:px-6 lg:px-12 py-3 ">
                     <div className="leftTopbar flex items-center">
@@ -110,7 +93,7 @@ export default function Topbar({ pageName, handlePageName }) {
                                 </button>
                                 {!menuHidden && (<>
                                     <span className="fixed bg-black w-full h-full right-0 top-0 opacity-0" onClick={handleMenuState}></span>
-                                    <DropDown handlePageName={handlePageName} />
+                                    <DropDown handleMenuState={handleMenuState} handlePageName={handlePageName} />
                                 </>)}
 
 
