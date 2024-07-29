@@ -6,6 +6,7 @@ import Footer from "./components/Footer.jsx"
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Certify from "./pages/Certify.jsx";
 import Profile from "./pages/Profile.jsx";
+import Apply from "./pages/Apply.jsx";
 function App() {
   const [pageName ,setpageName] = useState('dashboard')
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Certify" element={<Certify/>} />
           <Route path='/' element={<DashBoard/>} />
           <Route path='/contests' element={<Contests/>} />
+          <Route path='/apply' element={<Apply/>} />
           <Route path='/profile' element={<Profile/>} />
         </Routes>
         <Footer pageName={pageName} />
