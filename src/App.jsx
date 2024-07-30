@@ -24,7 +24,7 @@ function App() {
           <Route path='/' element={<DashBoard/>} />
           <Route path='/contests' element={<Contests/>} />
           <Route path='/apply' element={<Apply/>} />
-          <Route path='/profile' element={<Profile/>} />
+          <Route path='/profile' element={<Profile/>}  handlePageName={handlePageName}/>
         </Routes>
         <Footer pageName={pageName} />
       </Router>

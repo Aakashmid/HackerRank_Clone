@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         page_background: '#151519', 
         page_background2: '#040817', 
+        bg1:'#121418',
         bg2: '#0e141e', 
         bg3: '#1f202a',   // card bg 
         bg4:'#27272b', // dropdown bg of topbar
