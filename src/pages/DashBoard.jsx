@@ -12,6 +12,12 @@ export default function DashBoard() {
     python: 60,
   })
 
+  const [activePreparation,setActivePreparation]=useState(null)
+  
+  const  handlePreparation=(preparationName)=>{
+    setActivePreparation(preparationName)
+  }
+
   return (
     <>
      
@@ -21,8 +27,8 @@ export default function DashBoard() {
           <div className="prepCards-container mt-8">
             <p className="font-medium text-textPrimary text-lg">Your Preparation</p>
             <div className="dashboarPrepCards grid  md:grid-cols-2 gap-9 py-4  ">
-              <PreparationCard prepName={'Python'} progess={progess.python} />
-              <PreparationCard prepName={'C++'} progess={progess.cpp} />
+              <PreparationCard handlePreparation={handlePreparation} activePreparation={activePreparation} prepName={'Python'} progess={progess.python} />
+              <PreparationCard handlePreparation={handlePreparation} activePreparation={activePreparation} prepName={'C++'} progess={progess.cpp} />
             </div>
           </div>
 
