@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DashBoard from "./pages/DashBoard.jsx";
 import Contests from "./pages/Contests.jsx";
 import Topbar from "./components/Topbar"
@@ -7,11 +7,29 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Certify from "./pages/Certify.jsx";
 import Profile from "./pages/Profile.jsx";
 import Apply from "./pages/Apply.jsx";
+
 function App() {
-  const [pageName ,setpageName] = useState('dashboard')
+    const [pageName ,setpageName] = useState()
+
+    useEffect(()=>{
+      if(localStorage.getItem('pageName')){
+        setpageName(localStorage.getItem('pageName'))
+      }
+      else{
+        setpageName('dashboard')
+      }
+    },[])
+  // const location = useLocation();
+
+  // useEffect(() => {
+  //   // Update pageName based on the current URL path
+  //   const path = location.pathname;
+  //   setpageName(path.substring(1)); // Assuming you want to set pageName based on the path, adjust this logic as needed
+  // }, [location]);
 
   function handlePageName(keyname){
       setpageName(keyname)
+      localStorage.setItem('pageName',keyname)
   }
 
   return (

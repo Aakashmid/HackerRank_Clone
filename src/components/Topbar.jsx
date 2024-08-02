@@ -51,6 +51,8 @@ export default function Topbar({ pageName, handlePageName }) {
                 {/* sidebar for mobile screen */}
                 {!sidebarHidden && <SideBar hanldeSidebarState={hanldeSidebarState} />}
 
+
+                {/* larger screen topbar */}
                 <div className="larger-screen-topbar hidden md:flex justify-between items-center w-full md:px-6 lg:px-12 py-3 ">
                     <div className="leftTopbar flex items-center">
                         <div className="logo"><img src="assets/logo.png" className="w-[118px]" alt="" /></div>
@@ -76,7 +78,7 @@ export default function Topbar({ pageName, handlePageName }) {
                         </ul>
                     </div>
                     <div className="rightTopbar flex items-center">
-                        <div className="topBar-SeachBar bg-gray-700 p-0.5 rounded-md shadow-white mr-4 flex ">
+                        <div className="topBar-SeachBar bg-gray-700 p-[1px] rounded custom-shadow-white shadow-white mr-4 flex ">
                             <button className="text-white px-1"><Search fontSize="small" /></button>
                             <input type="text" className="bg-gray-700 text-white p-1 text-[13px] placeholder:text-gray-100 focus:outline-none w-16 lg:w-36 xl:w-44" placeholder="Search" />
                         </div>
