@@ -9,16 +9,19 @@ import Profile from "./pages/Profile.jsx";
 import Apply from "./pages/Apply.jsx";
 
 function App() {
-    const [pageName ,setpageName] = useState()
+    const [pageName ,setpageName] = useState('dashboard')
 
-    useEffect(()=>{
-      if(localStorage.getItem('pageName')){
-        setpageName(localStorage.getItem('pageName'))
-      }
-      else{
-        setpageName('dashboard')
-      }
-    },[])
+    // // store pagename to localstorage 
+    // useEffect(()=>{
+    //   if(localStorage.getItem('pageName')){
+    //     setpageName(localStorage.getItem('pageName'))
+    //   }
+    //   else{
+    //     setpageName('dashboard')
+    //   }
+    // },[])
+
+
   // const location = useLocation();
 
   // useEffect(() => {

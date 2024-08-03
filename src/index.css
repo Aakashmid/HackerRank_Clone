@@ -29,4 +29,8 @@
         box-shadow: 0px 0px 2px -1px rgb(65, 65, 73);
     }
 
+    .hide-scrollbar::-webkit-scrollbar{
+        display: none;
+    }
+
 }
