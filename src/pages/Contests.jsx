@@ -2,9 +2,28 @@ import { Link } from "react-router-dom"
 import PageHeader from "../components/PageHeader"
 import { CollegeContests, ArchivedContests } from "../DummyData/contestPageData"
 import ContestCard from "../components/Contests/ContestCard"
+import { ChevronLeft, ChevronRight, Score } from "@mui/icons-material"
+import { useEffect, useState } from "react"
 
 
 export default function Contests() {
+
+    const [ScrollValue, setScrollValue] = useState(0)
+
+    const handleScrollValue=(direction)=>{
+        if(direction === 'right'){
+            setScrollValue(ScrollValue+400)
+        }
+        else if(direction === 'left'){
+            setScrollValue(ScrollValue-400)
+        }
+    }
+
+    useEffect(()=>{
+            document.getElementById('archived_contests').scrollBy({left:ScrollValue,behavior:'smooth'});
+    },[ScrollValue])
+    
+
     return (
         <div className='contests-container bg-page_background min-h-[100vh] w-full'>
             <PageHeader pageName="All Contests" heading="Contests" bookmarkedChanllenges={false} />
@@ -21,15 +40,23 @@ export default function Contests() {
                         <h3 className="title text-[19px] font-medium text-white">Archived Contests</h3>
                         <Link className="px-5 py-2 rounded-md outline outline-1  text-white text-sm font-medium">View All</Link>
                     </div>
-                    <div className="contests-wrapper mt-6">
-                        {/* <div className=" "> */}
-                        <div className="flex items-center overflow-x-scroll space-x-8 hide-scrollbar">
+                    <div className="contests-wrapper mt-6 relative">
+
+                        <div  className="flex justify-center items-center contests-bg contests-bg-left from-page_background to-transparent  w-28  h-full absolute -left-20   ">
+                            <button onClick={()=>handleScrollValue('left')} className="left-scroll-btn bg-bg4  rounded-[50%] px-[10px] py-2"><ChevronLeft htmlColor="white" /></button>
+                        </div>
+                        <div className="flex justify-center items-center contests-bg contests-bg-left bfrompage_background  to-transparent w-28  h-full absolute -right-20   ">
+                            <button onClick={()=>handleScrollValue('right')} className="left-scroll-btn bg-bg4  rounded-[50%] px-[10px] py-2"><ChevronRight htmlColor="white" /></button>
+                        </div>
+
+                        <div id="archived_contests" className="flex items-center overflow-x-scroll space-x-8 hide-scrollbar ">
+
                             {ArchivedContests.map((item, index) => {
                                 if (index % 2 === 0) {
                                     const nextItem = ArchivedContests[index + 1]
                                     return (
                                         // <div className="flex flex-col space-y-4 w-[320px]">
-                                        <div className="">
+                                        <div key={index} className="">
                                             <div className="grid  grid-rows-2  gap-6 w-[300px]">
                                                 <ContestCard contestName={item.name} contestTime={item.time} />
                                                 {nextItem && <ContestCard contestName={nextItem.name} contestTime={nextItem.time} />}
