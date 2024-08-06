@@ -9,11 +9,6 @@
         box-sizing: border-box;
     }
 
-    /* Satoshi, Open Sans, sans-serif */
-    .font1{
-        font-family:  sans-serif;
-    }
-
 }
 
 @layer components{

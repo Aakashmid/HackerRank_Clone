@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function PageHeader({ pageName, heading, bookmarkedChanllenges }) {
     return (<>
-        <div className="pageHeader font1 bg-gray-900 md:bg-bg3  w-full border-b md:border-none border-borderColor -mt-[1px]">
+        <div className="pageHeader  bg-gray-900 md:bg-bg3  w-full border-b md:border-none border-borderColor -mt-[1px]">
             <div className="xl:w-10/12 2xl:w-[70%]  mx-auto flex justify-between items-center px-5 ">
                 <div className="HeaderRight text-left py-5">
                     <span className="text-textSecondary text-xs hidden md:block ">{pageName}</span>

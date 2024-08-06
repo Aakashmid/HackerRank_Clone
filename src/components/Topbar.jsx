@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import DropDown from "./topbar/DropDown"
 import { useEffect, useState } from "react"
 import SideBar from "./topbar/SideBar"
+import Inbox from "./topbar/Inbox"
 export default function Topbar({ pageName, handlePageName }) {
     const [menuHidden, setMenuHidden] = useState(true)
     const [sidebarHidden, setSidebarHidden] = useState(true)
@@ -77,30 +78,42 @@ export default function Topbar({ pageName, handlePageName }) {
                             </li>
                         </ul>
                     </div>
+
                     <div className="rightTopbar flex items-center">
                         <div className="topBar-SeachBar bg-gray-700 p-[1px] rounded custom-shadow-white shadow-white mr-4 flex ">
                             <button className="text-white px-1"><Search fontSize="small" /></button>
                             <input type="text" className="bg-gray-700 text-white p-1 text-[13px] placeholder:text-gray-100 focus:outline-none w-16 lg:w-36 xl:w-44" placeholder="Search" />
                         </div>
-                        <div className="flex items-center space-x-6 ">
-                            <span className="text-textSecondary p-1"><ChatBubbleOutline fontSize="small" /></span>
-                            <span className="text-textSecondary p-1"><NotificationsNone fontSize="medium" /></span>
 
-                            <div className="mx-4 h-4 w-0.5 bg-gray-400"></div>
-                            <span className="p-1 text-gray-400"><AppsOutlined /></span>
-                            <div className="profile-menu p-1 relative">
+                        <ul className="flex items-center space-x-6 ">
+                            <li className="relative cursor-pointer">
+                                <span className="text-textSecondary p-1 "><ChatBubbleOutline fontSize="small" /></span>
+                                <div className="absolute top-10 right-0">
+                                    <Inbox />
+                                </div>
+                            </li>
+                            <li className="relative cursor-pointer">
+                                <span className="text-textSecondary p-1"><NotificationsNone fontSize="medium" /></span>
+                            </li>
+
+                            <li className="mx-4 h-4 w-0.5 bg-gray-400"></li>
+                            <li className="p-1 text-gray-400"><AppsOutlined /></li>
+
+                            <li className="topbar-menu p-1 relative">
                                 <button className="profile-btn flex items-center space-x-1 " onClick={handleMenuState}>
                                     <img src="assets/profile.png" className="profileImg w-7 h-7 rounded-[50%] border object-cover " alt="" />
                                     <i className={`text-gray-400  hover:text-white ${!menuHidden && 'text-white'}`}><ExpandMore /></i>
                                 </button>
+
+                                {/* menu dropdown */}
                                 {!menuHidden && (<>
                                     <span className="fixed bg-black w-full h-full right-0 top-0 opacity-0" onClick={handleMenuState}></span>
                                     <DropDown handleMenuState={handleMenuState} handlePageName={handlePageName} />
                                 </>)}
 
 
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 

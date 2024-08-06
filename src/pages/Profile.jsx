@@ -27,7 +27,7 @@ export default function Profile({ handlePageName }) {
                             </div>
                             <ul className="flex flex-col space-y-2 mt-6">
                                 <li className="flex items-center space-x-2 ">
-                                    <MailOutlineRounded htmlColor="white" style={{fontSize:'14px'}} className="text-gray-500" />
+                                    <MailOutlineRounded htmlColor="white" style={{fontSize:'14px'}}  />
                                     <p className="  text-white text-[13px]">aaakash13@gmail.com</p>
                                 </li>
                                 <li className="flex items-center space-x-2 ">

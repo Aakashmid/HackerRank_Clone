@@ -11,7 +11,7 @@ export default function PreparationCard({ prepName, progess ,activePreparation, 
         <p className='text-sm font-semibold text-white'>{progess}%</p>
         </div>
         <div className="" onClick={()=>handlePreparation(prepName)}>
-          <button className={`${prepName === activePreparation ? 'bg-buttonBg hover:bg-green-200':'custom-shadow-white hover:bg-gray-50 text-white hover:text-gray-950'}  font-medium text-sm p-3 rounded-lg`}>Continue Preparation</button>
+          <button className={`${prepName === activePreparation ? 'bg-buttonBg hover:bg-green-200':'custom-shadow-white hover:bg-gray-400 text-white hover:text-gray-950'}  font-medium text-sm p-3 rounded-lg`}>Continue Preparation</button>
         </div>
       </div>
 

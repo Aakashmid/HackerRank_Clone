@@ -27,13 +27,11 @@ export default function ScrollableContestsBox({ name, allContests }) {
                 <Link className="px-5 py-2 rounded-md outline outline-1  text-white text-sm font-medium">View All</Link>
             </div>
             <div className="contests-wrapper py-6 relative">
-                {/* {scrollRef.current.scrollLeft > 0 && ( */}
-                <div className="flex justify-start items-center contests-bg contests-bg-left  w-32  h-full absolute -left-20">
+               
+                <div className="hidden md:flex justify-start items-center contests-bg contests-bg-left  w-32  h-full absolute -left-20">
                     <button onClick={() => handleScrollValue('left')} className="left-scroll-btn  bg-bg4  rounded-[50%] px-[10px] py-2"><ChevronLeft htmlColor="white" /></button>
                 </div>
-                {/* )
-                        } */}
-                <div className="flex justify-end items-center contests-bg contests-bg-left   w-32   h-full absolute -right-20   ">
+                <div className="hidden md:flex justify-end items-center contests-bg contests-bg-left   w-32   h-full absolute -right-20   ">
                     <button onClick={() => handleScrollValue('right')} className="left-scroll-btn  bg-bg4  rounded-[50%] px-[10px] py-2"><ChevronRight htmlColor="white" /></button>
                 </div>
 
