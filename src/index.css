@@ -9,13 +9,17 @@
         box-sizing: border-box;
     }
 
+    .font1{
+        font-weight: 400;
+        font-family:  'Courier New', Courier, monospace;
+    }
 }
 
 @layer components{
     .custom-shadow-white {
-        -webkit-box-shadow: 0px 0px 2px 0px rgb(255, 255, 255);
-        -moz-box-shadow: 0px 0px 2px 0px rgb(255, 255, 255);
-        box-shadow: 0px 0px 2px 0px rgb(255, 255, 255);
+        -webkit-box-shadow: 0px 0px 2px 0px rgb(185, 183, 183);
+        -moz-box-shadow: 0px 0px 2px 0px rgb(185, 183, 183);
+        box-shadow: 0px 0px 2px 0px rgb(185, 183, 183);
     }
     
     .custom-shadow-darkb{

@@ -23,8 +23,8 @@ export default function DashBoard() {
      
       <div className='dashboard-container bg-page_background min-h-[100vh] w-full'>
         <PageHeader pageName="Prepare" heading="Learn programming skills" bookmarkedChanllenges={true} />
-        <div className="dashboard-wrapper  xl:w-10/12 2xl:w-[70%] w-full  mx-auto  px-5  ">
-          <div className="prepCards-container mt-8">
+        <div className="dashboard-wrapper  lg:w-[95%] xl:w-[1240px]    w-full  mx-auto  px-5  ">
+          <div className="prepCards-container mt-10">
             <p className="font-medium text-white text-lg">Your Preparation</p>
             <div className="dashboarPrepCards grid  md:grid-cols-2 gap-9 py-4  ">
               <PreparationCard handlePreparation={handlePreparation} activePreparation={activePreparation} prepName={'Python'} progess={progess.python} />

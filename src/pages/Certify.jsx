@@ -7,7 +7,7 @@ function Certify() {
         <div className="certify-container bg-page_background min-h-[100vh] w-full">
             <PageHeader pageName="Certification Tests" heading="Get Certified" bookmarkedChanllenges={false} />
             <div className="banner-wrapper bg-gradient-to-r from-[#193b84]  to-[#037bc1]  ">
-                <div className=" flex flex-wrap  xl:w-10/12 2xl:w-[70%] w-full  mx-auto  px-5 py-10  ">
+                <div className=" flex flex-wrap  lg:w-[95%] xl:w-[1240px] w-full  mx-auto  px-5 py-10  ">
                     <div className="md:w-[300px] md:pr-5 flex-grow pb-7 md:pb-0">
                         <h2 className="banner-heading  text-stone-200 font-medium pb-2">Standout form the crowd</h2>
                         <p className="banner-text text-stone-200 text-[13px]">
@@ -28,7 +28,7 @@ function Certify() {
                     </div>
                 </div>
             </div>
-            <div className="content xl:w-10/12 2xl:w-[70%] w-full  mx-auto  p-5 mt-4">
+            <div className="content lg:w-[95%] xl:w-[1240px] w-full  mx-auto  p-5 mt-4">
                 <div className="role-certifications">
                     <h2 className="text-xl text-white">Get Your Role Certified</h2>
                     <div className="grid md:grid-cols-3  gap-12 lg:gap-[52px] py-4   ">

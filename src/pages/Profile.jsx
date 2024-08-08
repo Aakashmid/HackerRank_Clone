@@ -7,12 +7,13 @@ import ProfileStatsCard from "../components/Profile/ProfileStatsCard";
 export default function Profile({ handlePageName }) {
     return (
         <div className='profile-container bg-page_background2 min-h-[100vh] w-full'>
-            <div className="profile-wrapper  xl:w-10/12 2xl:w-[70%] w-full  mx-auto  px-5 min-h-[50vh] pb-6 ">\
+            <div className="profile-wrapper lg:w-[95%] xl:w-[1240px] w-full  mx-auto  px-5 min-h-[50vh] pb-6 ">\
                 <div className="grid w-full md:grid-cols-3 gap-8">
                     <div className=" flex flex-col space-y-6">
 
                         <div className="profile-card w-full bg-bg1 custom-shadow-white lg:p-[26px] rounded-xl p-4">
-                            <div className="profile-card-header flex items-center justify-between"><img src="" alt="" className="profileImg w-12 h-12 rounded-[50%] bg-white" />
+                            <div className="profile-card-header flex items-center justify-between">
+                                <img src="assets/defaultProfile.jpg" alt=".." className="profileImg w-12 h-12 rounded-[50%] bg-white" />
                                 <span className="edit-icon cursor-pointer"><ModeSharp htmlColor="white" fontSize="small" /></span></div>
                             <div className="text-white mt-8">
                                 <h1 className="profile-title text-[26px] font-medium">Aakash Kumar Jha</h1>

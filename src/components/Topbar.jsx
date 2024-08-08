@@ -1,12 +1,16 @@
-import { ChatBubbleOutline, ExpandMore, NotificationsNone, Search, AppsOutlined, SdOutlined } from "@mui/icons-material"
+import { ChatBubbleOutline, ExpandMore, NotificationsNone, Search, AppsOutlined } from "@mui/icons-material"
 import { Link } from "react-router-dom"
 import DropDown from "./topbar/DropDown"
 import { useEffect, useState } from "react"
 import SideBar from "./topbar/SideBar"
 import Inbox from "./topbar/Inbox"
+import Notificationsbox from "./topbar/Notificationsbox"
 export default function Topbar({ pageName, handlePageName }) {
     const [menuHidden, setMenuHidden] = useState(true)
     const [sidebarHidden, setSidebarHidden] = useState(true)
+    const [notificationHidden, setNotificationHidden] = useState(true)
+    const [messageHidden, setMessageHidden] = useState(true)
+
 
     const handleMenuState = () => {
         setMenuHidden(!menuHidden)
@@ -56,24 +60,24 @@ export default function Topbar({ pageName, handlePageName }) {
                 {/* larger screen topbar */}
                 <div className="larger-screen-topbar hidden md:flex justify-between items-center w-full md:px-6 lg:px-12 py-3 ">
                     <div className="leftTopbar flex items-center">
-                        <div className="logo"><img src="assets/logo.png" className="w-[118px]" alt="" /></div>
-                        <ul className="nav-links flex  text-textSecondary  items-center text-[13px]">
+                        <div className="logo"><img src="assets/logo.png" className="w-[128px]" alt="" /></div>
+                        <ul className="nav-links flex  text-textSecondary  items-center text-sm">
                             <li className="px-4 "><div className="h-4 w-0.5 bg-borderColor"></div></li>
                             <li className="relative">
-                                <Link to='/' onClick={() => OnUpdatePageName('dashboard')} className={`px-[18px]  ${pageName === 'dashboard' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200 '}`}>Prepare</Link>
+                                <Link to='/' onClick={() => OnUpdatePageName('dashboard')} className={`px-[18px]  ${pageName === 'dashboard' ? 'text-white font-medium ' : 'hover:text-gray-200 '}`}>Prepare</Link>
                                 {pageName === 'dashboard' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
 
                             </li>
                             <li className="relative">
-                                <Link to='/Certify' onClick={() => OnUpdatePageName('Certify')} className={`px-[18px]  ${pageName === 'certify' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Certify</Link>
+                                <Link to='/Certify' onClick={() => OnUpdatePageName('Certify')} className={`px-[18px]  ${pageName === 'Certify' ? 'text-white font-medium ' : 'hover:text-gray-200'}`}>Certify</Link>
                                 {pageName === 'Certify' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
                             </li>
                             <li className="relative">
-                                <Link to='/contests' onClick={() => OnUpdatePageName('compete')} className={`px-[18px]   ${pageName === 'compete' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Compete</Link>
+                                <Link to='/contests' onClick={() => OnUpdatePageName('compete')} className={`px-[18px]   ${pageName === 'compete' ? 'text-white font-medium ' : 'hover:text-gray-200'}`}>Compete</Link>
                                 {pageName === 'compete' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
                             </li>
                             <li className="relative">
-                                <Link to='/apply' onClick={() => OnUpdatePageName('apply')} className={`px-[18px]   ${pageName === 'apply' ? 'text-textPrimary font-medium ' : 'hover:text-gray-200'}`}>Apply</Link>
+                                <Link to='/apply' onClick={() => OnUpdatePageName('apply')} className={`px-[18px]   ${pageName === 'apply' ? 'text-white font-medium ' : 'hover:text-gray-200'}`}>Apply</Link>
                                 {pageName === 'apply' && <div className="absolute w-full border-b -bottom-5 inset-x-0 border-2 border-buttonBg"></div>}
                             </li>
                         </ul>
@@ -81,19 +85,30 @@ export default function Topbar({ pageName, handlePageName }) {
 
                     <div className="rightTopbar flex items-center">
                         <div className="topBar-SeachBar bg-gray-700 p-[1px] rounded custom-shadow-white shadow-white mr-4 flex ">
-                            <button className="text-white px-1"><Search fontSize="small" /></button>
-                            <input type="text" className="bg-gray-700 text-white p-1 text-[13px] placeholder:text-gray-100 focus:outline-none w-16 lg:w-36 xl:w-44" placeholder="Search" />
+                            <button className="text-white px-1"><Search fontSize="medium" /></button>
+                            <input type="text" className="bg-gray-700 text-white p-1 text-sm placeholder:text-gray-100 focus:outline-none w-16 lg:w-[120px] xl:w-[200px]" placeholder="Search" />
                         </div>
 
                         <ul className="flex items-center space-x-6 ">
                             <li className="relative cursor-pointer">
-                                <span className="text-textSecondary p-1 "><ChatBubbleOutline fontSize="small" /></span>
-                                <div className="absolute top-10 right-0">
-                                    <Inbox />
-                                </div>
+                                <span className="text-textSecondary p-1 hover:text-white" onClick={()=>setMessageHidden(false)}><ChatBubbleOutline fontSize="small" /></span>
+                                {!messageHidden && (<>
+                                    <div className="absolute top-10 right-0">
+                                        <Inbox />
+                                    </div>
+                                    <span className="fixed bg-black w-full h-full right-0 top-0 opacity-0" onClick={() => setMessageHidden(true)}></span>
+                                </>)
+                                }
                             </li>
                             <li className="relative cursor-pointer">
-                                <span className="text-textSecondary p-1"><NotificationsNone fontSize="medium" /></span>
+                                <span className=" text-textSecondary p-1 hover:text-white" onClick={()=>setNotificationHidden(false)}><NotificationsNone fontSize="medium" /></span>
+                                {!notificationHidden && (<>
+                                    <div className="absolute top-10 right-0">
+                                        <Notificationsbox />
+                                    </div>
+                                    <span className="fixed bg-black w-full h-full right-0 top-0 opacity-0" onClick={() => setNotificationHidden(true)}></span>
+                                </>)
+                                }
                             </li>
 
                             <li className="mx-4 h-4 w-0.5 bg-gray-400"></li>

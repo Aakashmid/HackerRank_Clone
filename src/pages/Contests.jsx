@@ -9,7 +9,7 @@ export default function Contests() {
     return (
         <div className='contests-container bg-page_background min-h-[100vh] w-full'>
             <PageHeader pageName="All Contests" heading="Contests" bookmarkedChanllenges={false} />
-            <div className=" contests xl:w-10/12 2xl:w-[70%] w-full  mx-auto  px-5 ">
+            <div className=" contests lg:w-[95%] xl:w-[1240px] w-full  mx-auto  px-5 ">
                 <div className="active-contest mt-8">
                     <h3 className="title text-[19px] font-medium text-white">Active Contests</h3>
                     {/*  active contest  */}
@@ -17,7 +17,7 @@ export default function Contests() {
                         {activeContests.length > 0 ? (
                             activeContests.map((data, id) => {
                                 return (
-                                    <div className="w-[300px]">
+                                    <div className="w-[300px] lg:w-[320px]">
                                         <ContestCard contestName={data.name} contestTime={data.time} activeContest={true} />
                                     </div>
                                 )

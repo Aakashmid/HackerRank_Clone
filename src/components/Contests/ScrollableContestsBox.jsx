@@ -43,7 +43,7 @@ export default function ScrollableContestsBox({ name, allContests }) {
                             return (
                                 // <div className="flex flex-col space-y-4 w-[320px]">
                                 <div key={index} className="">
-                                    <div className="grid  grid-rows-2  gap-6 w-[300px]">
+                                    <div className="grid  grid-rows-2  gap-6 w-[280px] lg:w-[320px]">
                                         <ContestCard contestName={item.name} contestTime={item.time} />
                                         {nextItem && <ContestCard contestName={nextItem.name} contestTime={nextItem.time} />}
                                     </div>
